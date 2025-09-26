@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String word = sc.next();
+        String result = "";
+
+        for(int i = 0; i < word.length(); i++) {
+            if(Character.isUpperCase(word.charAt(i))) {
+                result += Character.toLowerCase(word.charAt(i));
+            } else if (Character.isLowerCase(word.charAt(i))) {
+                result += Character.toUpperCase(word.charAt(i));
+            }
+        }
+
+        System.out.println(result);
+    }
+}
